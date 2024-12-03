@@ -1,19 +1,16 @@
-public class Ride {
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
+
+public class Ride implements RideInterface {
     private String rideName;
-    private int capacity;
-    private Employee operator; // Employee assigned to operate this ride
+    private final Queue<Visitor> waitingLine = new LinkedList<>();
+    private final List<Visitor> rideHistory = new LinkedList<>();
 
-    // Default constructor
-    public Ride() {}
-
-    // Parameterized constructor
-    public Ride(String rideName, int capacity, Employee operator) {
+    public Ride(String rideName) {
         this.rideName = rideName;
-        this.capacity = capacity;
-        this.operator = operator;
     }
 
-    // Getters and Setters
     public String getRideName() {
         return rideName;
     }
@@ -22,20 +19,62 @@ public class Ride {
         this.rideName = rideName;
     }
 
-    public int getCapacity() {
-        return capacity;
+    @Override
+    public void addVisitorToQueue(Visitor visitor) {
+        waitingLine.add(visitor);
+        System.out.println(visitor.getName() + " added to the waiting line.");
     }
 
-    public void setCapacity(int capacity) {
-        this.capacity = capacity;
+    @Override
+    public void removeVisitorFromQueue() {
+        if (!waitingLine.isEmpty()) {
+            Visitor removedVisitor = waitingLine.poll();
+            System.out.println(removedVisitor.getName() + " removed from the waiting line.");
+        } else {
+            System.out.println("The waiting line is empty.");
+        }
     }
 
-    public Employee getOperator() {
-        return operator;
+    @Override
+    public void printQueue() {
+        System.out.println("Visitors in the waiting line: ");
+        for (Visitor visitor : waitingLine) {
+            System.out.println("- " + visitor.getName());
+        }
     }
 
-    public void setOperator(Employee operator) {
-        this.operator = operator;
+    @Override
+    public void runOneCycle() {
+        int maxVisitorsPerCycle = 2; // 假设每次最多允许2人游玩
+        System.out.println("Running ride: " + rideName);
+        for (int i = 0; i < maxVisitorsPerCycle && !waitingLine.isEmpty(); i++) {
+            Visitor visitor = waitingLine.poll();
+            System.out.println(visitor.getName() + " is riding.");
+            addVisitorToHistory(visitor);
+        }
+    }
+
+    @Override
+    public void addVisitorToHistory(Visitor visitor) {
+        rideHistory.add(visitor);
+        System.out.println(visitor.getName() + " added to the ride history.");
+    }
+
+    @Override
+    public boolean checkVisitorFromHistory(Visitor visitor) {
+        return rideHistory.contains(visitor);
+    }
+
+    @Override
+    public int numberOfVisitors() {
+        return rideHistory.size();
+    }
+
+    @Override
+    public void printRideHistory() {
+        System.out.println("Visitors who took the ride: ");
+        for (Visitor visitor : rideHistory) {
+            System.out.println("- " + visitor.getName());
+        }
     }
 }
-
