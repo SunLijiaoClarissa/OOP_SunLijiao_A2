@@ -7,12 +7,12 @@ public class Visitor extends Person {
 
     // Parameterized constructor
     public Visitor(String name, int age, String contactNumber, String ticketType, boolean hasMembership) {
-        super(name, age, contactNumber); // Call parent class constructor
+        super(name, age, contactNumber); // Call parent constructor
         this.ticketType = ticketType;
         this.hasMembership = hasMembership;
     }
 
-    // Getters and Setters
+    // Getters and setters
     public String getTicketType() {
         return ticketType;
     }
@@ -29,3 +29,4 @@ public class Visitor extends Person {
         this.hasMembership = hasMembership;
     }
 }
+

@@ -1,24 +1,24 @@
 public class Employee extends Person {
-    private String position;
+    private String jobTitle;
     private double salary;
 
     // Default constructor
     public Employee() {}
 
     // Parameterized constructor
-    public Employee(String name, int age, String contactNumber, String position, double salary) {
-        super(name, age, contactNumber); // Call parent class constructor
-        this.position = position;
+    public Employee(String name, int age, String contactNumber, String jobTitle, double salary) {
+        super(name, age, contactNumber); // Call parent constructor
+        this.jobTitle = jobTitle;
         this.salary = salary;
     }
 
-    // Getters and Setters
-    public String getPosition() {
-        return position;
+    // Getters and setters
+    public String getJobTitle() {
+        return jobTitle;
     }
 
-    public void setPosition(String position) {
-        this.position = position;
+    public void setJobTitle(String jobTitle) {
+        this.jobTitle = jobTitle;
     }
 
     public double getSalary() {
@@ -29,4 +29,3 @@ public class Employee extends Person {
         this.salary = salary;
     }
 }
-

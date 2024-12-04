@@ -1,18 +1,19 @@
-public abstract class Person {
+public abstract class Person { // Make Person an abstract class
     private String name;
     private int age;
-    private String contactInfo;
+    private String contactNumber;
 
-    // 构造方法
+    // Default constructor
     public Person() {}
 
-    public Person(String name, int age, String contactInfo) {
+    // Parameterized constructor
+    public Person(String name, int age, String contactNumber) {
         this.name = name;
         this.age = age;
-        this.contactInfo = contactInfo;
+        this.contactNumber = contactNumber;
     }
 
-    // Getter 和 Setter 方法
+    // Getters and setters
     public String getName() {
         return name;
     }
@@ -29,11 +30,11 @@ public abstract class Person {
         this.age = age;
     }
 
-    public String getContactInfo() {
-        return contactInfo;
+    public String getContactNumber() {
+        return contactNumber;
     }
 
-    public void setContactInfo(String contactInfo) {
-        this.contactInfo = contactInfo;
+    public void setContactNumber(String contactNumber) {
+        this.contactNumber = contactNumber;
     }
 }
