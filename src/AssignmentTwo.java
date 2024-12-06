@@ -1,29 +1,35 @@
 public class AssignmentTwo {
     public static void main(String[] args) {
-        // 主方法，可以创建Ride对象并调用方法进行测试
+        // The main method can be used to run the program or for testing purposes
     }
 
+    // Method for part three of the assignment
     public void partThree() {
-        
+        // Implementation for part three goes here
     }
 
+    // Method for part four A of the assignment
     public void partFourA() {
-        // 部分实现，可以根据需要添加方法
+        // Implementation for part four A goes here
     }
 
+    // Method for part four B of the assignment
     public void partFourB() {
-        // 部分实现，可以根据需要添加方法
+        // Implementation for part four B goes here
     }
 
+    // Method for part five of the assignment
     public void partFive() {
-        // 部分实现
+        // Implementation for part five goes here
     }
 
+    // Method for part six of the assignment
     public void partSix() {
-        // 部分实现
+        // Implementation for part six goes here
     }
 
+    // Method for part seven of the assignment
     public void partSeven() {
-        // 部分实现
+        // Implementation for part seven goes here
     }
 }
