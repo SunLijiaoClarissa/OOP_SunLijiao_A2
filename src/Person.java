@@ -1,16 +1,24 @@
-public abstract class Person { // Make Person an abstract class
+public class Person {
+    // Instance variables
     private String name;
     private int age;
-    private String contactNumber;
+    private String address;
+    private String email; // 新添加的 Email 实例变量
 
     // Default constructor
-    public Person() {}
+    public Person() {
+        this.name = "Unknown";
+        this.age = 0;
+        this.address = "Not Provided";
+        this.email = "Not Provided"; // 默认值为 "Not Provided"
+    }
 
     // Parameterized constructor
-    public Person(String name, int age, String contactNumber) {
+    public Person(String name, int age, String address, String email) {
         this.name = name;
         this.age = age;
-        this.contactNumber = contactNumber;
+        this.address = address;
+        this.email = email;
     }
 
     // Getters and setters
@@ -30,11 +38,25 @@ public abstract class Person { // Make Person an abstract class
         this.age = age;
     }
 
-    public String getContactNumber() {
-        return contactNumber;
+    public String getAddress() {
+        return address;
     }
 
-    public void setContactNumber(String contactNumber) {
-        this.contactNumber = contactNumber;
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    // toString method for debugging
+    @Override
+    public String toString() {
+        return "Person{name='" + name + "', age=" + age + ", address='" + address + "', email='" + email + "'}";
     }
 }
