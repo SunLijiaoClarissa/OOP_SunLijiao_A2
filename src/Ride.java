@@ -10,6 +10,8 @@ public class Ride implements RideInterface {
     private String description;
     private final LinkedList<Visitor> visitorQueue; // 排队游客的队列
     private final LinkedList<Visitor> rideHistory; // 乘坐过游乐设施的游客历史记录
+    private int maxRider;  // 每个周期最多可接待的游客数量
+    private int numOfCycles; // 游乐设施已运行的周期数
 
     // 默认构造器
     public Ride() {
@@ -20,10 +22,12 @@ public class Ride implements RideInterface {
         this.description = "No description available.";
         this.visitorQueue = new LinkedList<>();
         this.rideHistory = new LinkedList<>();
+        this.maxRider = 1;  // 至少可以接待1个游客
+        this.numOfCycles = 0; // 默认周期数为0
     }
 
     // 参数化构造器
-    public Ride(String rideName, String rideType, Employee operator, boolean isOpen, String description) {
+    public Ride(String rideName, String rideType, Employee operator, boolean isOpen, String description, int maxRider) {
         this.rideName = rideName;
         this.rideType = rideType;
         this.operator = operator;
@@ -31,6 +35,8 @@ public class Ride implements RideInterface {
         this.description = description;
         this.visitorQueue = new LinkedList<>();
         this.rideHistory = new LinkedList<>();
+        this.maxRider = maxRider >= 1 ? maxRider : 1;  // 确保maxRider至少为1
+        this.numOfCycles = 0;
     }
 
     // 添加游客到排队队列
@@ -70,16 +76,28 @@ public class Ride implements RideInterface {
     // 模拟一次游乐设施运行周期
     @Override
     public void runOneCycle() {
-        if (!visitorQueue.isEmpty()) {
-            // 取出排队的第一个游客并让其乘坐游乐设施
-            Visitor visitor = visitorQueue.poll();  // remove the first visitor in the queue
-            System.out.println("Visitor '" + visitor.getName() + "' is taking the ride.");
-            
-            // 将游客添加到历史记录
-            addVisitorToHistory(visitor);
-        } else {
-            System.out.println("No visitors in the queue.");
+        // 如果没有操作员，不能运行
+        if (operator == null) {
+            System.out.println("Cannot run the ride: No operator assigned.");
+            return;
         }
+
+        // 如果队列中没有游客，不能运行
+        if (visitorQueue.isEmpty()) {
+            System.out.println("Cannot run the ride: No waiting visitors in the queue.");
+            return;
+        }
+
+        // 计算本周期接待的游客数量，最多为 maxRider 或队列中游客数量
+        int visitorsToRide = Math.min(maxRider, visitorQueue.size());
+        for (int i = 0; i < visitorsToRide; i++) {
+            Visitor visitor = visitorQueue.poll(); // 从队列中取出游客
+            addVisitorToHistory(visitor); // 将游客添加到历史记录中
+        }
+
+        // 增加周期计数
+        numOfCycles++;
+        System.out.println("Ride has been run successfully. Total cycles: " + numOfCycles);
     }
 
     // 将游客添加到游乐设施历史记录中
