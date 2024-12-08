@@ -1,3 +1,4 @@
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.LinkedList;
 
@@ -126,7 +127,13 @@ public class Ride implements RideInterface {
             }
         }
     }
-    
+
+    // 使用 VisitorComparator 对游客历史记录进行排序
+    public void sortVisitors() {
+        Collections.sort(rideHistory, new VisitorComparator());
+        System.out.println("Visitors sorted by points, age, and fast track status.");
+    }
+
     // 其他 getter 和 setter 方法
     public String getRideName() {
         return rideName;
