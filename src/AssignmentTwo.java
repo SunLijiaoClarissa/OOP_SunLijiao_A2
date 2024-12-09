@@ -2,11 +2,18 @@ public class AssignmentTwo {
     public static void main(String[] args) {
         // The main method can be used to run the program or for testing purposes
         AssignmentTwo assignment = new AssignmentTwo();
-        assignment.partSix(); // 调用 partFourB 方法来测试
+        // Run all parts in sequence for testing purposes
+        assignment.partThree(); // Run part 3
+        assignment.partFourA(); // Run part 4A
+        assignment.partFourB(); // Run part 4B
+        assignment.partFive();  // Run part 5
+        assignment.partSix();   // Run part 6
+        assignment.partSeven(); // Run part 7
     }
 
     // Method for part three of the assignment
     public void partThree() {
+        System.out.println("=== Part Three ===");
          // 创建一个 Employee 操作员
         Employee rideOperator = new Employee("John", 35, "789 Worker St", "john@example.com", "Ride Operator", "E12345", true);
 
@@ -36,6 +43,7 @@ public class AssignmentTwo {
 
     // Method for part four A of the assignment
     public void partFourA() {
+        System.out.println("=== Part FourA ===");
         // 创建一个新的 Employee 操作员
         Employee rideOperator = new Employee("John", 35, "789 Worker St", "john@example.com", "Ride Operator", "E12345", true);
 
@@ -73,6 +81,7 @@ public class AssignmentTwo {
 
     // Method for part four B of the assignment
     public void partFourB() {
+        System.out.println("=== Part FourB ===");
         // 创建一个新的 Employee 操作员
         Employee rideOperator = new Employee("John", 35, "789 Worker St", "john@example.com", "Ride Operator", "E12345", true);
     
@@ -113,6 +122,7 @@ public class AssignmentTwo {
 
     // Method for part five of the assignment
     public void partFive() {
+        System.out.println("=== Part Five ===");
         // Create a new Employee operator
         Employee rideOperator = new Employee("John", 35, "789 Worker St", "john@example.com", "Ride Operator", "E12345", true);
         
@@ -160,6 +170,7 @@ public class AssignmentTwo {
 
     // Method for part six of the assignment
     public void partSix() {
+        System.out.println("=== Part Six ===");
         // Implementation for part six goes here
          // Create a new Ride
         Ride rollerCoaster = new Ride("Thunderbolt", "Roller Coaster", null, true, "A thrilling roller coaster", 4);
@@ -184,6 +195,20 @@ public class AssignmentTwo {
 
     // Method for part seven of the assignment
     public void partSeven() {
-        // Implementation for part seven goes here
-    }
+        System.out.println("=== Part Seven ===");
+        // 1. 创建一个新的 Ride 对象
+    Employee rideOperator = new Employee("John", 35, "789 Worker St", "john@example.com", "Ride Operator", "E12345", true);
+    Ride rollerCoaster = new Ride("Roller Coaster", "Thrill", rideOperator, true, "A thrilling roller coaster ride.", 50);
+
+    // 2. 导入 CSV 文件（假设 CSV 文件路径是 "rideHistory.csv"）
+    String filePath = "rideHistory.csv";  // 这个路径应该是之前导出的 CSV 文件路径
+    rollerCoaster.importRideHistory(filePath);  // 使用 importRideHistory 方法导入游客数据
+
+    // 3. 打印导入的游客数量
+    int numberOfVisitors = rollerCoaster.numberOfVisitors();  // 使用 numberOfVisitors 方法获取游客数量
+    System.out.println("Total number of visitors imported: " + numberOfVisitors);
+
+    // 4. 打印所有导入的游客信息
+    rollerCoaster.printRideHistory();  // 使用 printRideHistory 方法打印所有导入的游客信息
+}
 }
