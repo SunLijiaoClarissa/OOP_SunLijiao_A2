@@ -1,0 +1,6 @@
+Name,Age,Address,Email,Ticket Type,Points,Has Fast Track
+Alice,25,123 Main St,alice@example.com,Adult,100,false
+Bob,30,456 Elm St,bob@example.com,Adult,200,true
+Charlie,22,789 Oak St,charlie@example.com,Student,150,false
+David,28,101 Pine St,david@example.com,Adult,120,true
+Eve,35,202 Maple St,eve@example.com,Senior,80,false

@@ -1,3 +1,8 @@
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -152,7 +157,74 @@ public class Ride implements RideInterface {
         System.out.println("Visitors sorted by points, age, and fast track status.");
     }
 
-    // 其他 getter 和 setter 方法
+    // Part 6 - Export Ride History to CSV File
+    public void exportRideHistory() {
+        String filePath = "rideHistory.csv"; // File path, can be changed if needed
+
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
+            // Writing the header row
+            writer.write("Name,Age,Address,Email,Ticket Type,Points,Has Fast Track");
+            writer.newLine();
+
+            // Write each visitor's details to the CSV
+            for (Visitor visitor : rideHistory) {
+                String visitorData = visitor.getName() + "," +
+                                     visitor.getAge() + "," +
+                                     visitor.getAddress() + "," +
+                                     visitor.getEmail() + "," +
+                                     visitor.getTicketType() + "," +
+                                     visitor.getPoints() + "," +
+                                     visitor.hasFastTrack();
+                writer.write(visitorData);
+                writer.newLine();  // Move to the next line for the next visitor
+            }
+
+            System.out.println("Ride history has been successfully exported to " + filePath);
+        } catch (IOException e) {
+            // Handle errors related to file writing
+            System.err.println("Error while exporting ride history to file: " + e.getMessage());
+        }
+    }
+
+    // Part 7 - Import Ride History from a CSV File
+    public void importRideHistory(String filename) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
+            String line;
+            // Skip header line
+            reader.readLine();
+            
+            while ((line = reader.readLine()) != null) {
+                String[] data = line.split(","); // Assuming the CSV format
+                
+                if (data.length != 7) {
+                    System.err.println("Skipping invalid line: " + line);
+                    continue; // Skip any line with incorrect number of fields
+                }
+
+                String name = data[0];
+                int age = Integer.parseInt(data[1]);
+                String address = data[2];
+                String email = data[3];
+                String ticketType = data[4];
+                int points = Integer.parseInt(data[5]);
+                boolean fastTrack = Boolean.parseBoolean(data[6]);
+
+                // Create a new Visitor object
+                Visitor visitor = new Visitor(name, age, address, email, ticketType, points, fastTrack);
+
+                // Add the visitor to the ride history
+                addVisitorToHistory(visitor);
+            }
+
+            System.out.println("Ride history has been successfully imported from " + filename);
+        } catch (IOException e) {
+            System.err.println("Error reading the file: " + e.getMessage());
+        } catch (NumberFormatException e) {
+            System.err.println("Error parsing data: " + e.getMessage());
+        }
+    }
+
+    // Other getter and setter methods
     public String getRideName() {
         return rideName;
     }

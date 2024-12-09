@@ -2,7 +2,7 @@ public class AssignmentTwo {
     public static void main(String[] args) {
         // The main method can be used to run the program or for testing purposes
         AssignmentTwo assignment = new AssignmentTwo();
-        assignment.partFive(); // 调用 partFourB 方法来测试
+        assignment.partSix(); // 调用 partFourB 方法来测试
     }
 
     // Method for part three of the assignment
@@ -161,6 +161,25 @@ public class AssignmentTwo {
     // Method for part six of the assignment
     public void partSix() {
         // Implementation for part six goes here
+         // Create a new Ride
+        Ride rollerCoaster = new Ride("Thunderbolt", "Roller Coaster", null, true, "A thrilling roller coaster", 4);
+
+         // Create at least 5 Visitor objects
+        Visitor visitor1 = new Visitor("Alice", 25, "123 Main St", "alice@example.com", "Adult", 100, false);
+        Visitor visitor2 = new Visitor("Bob", 30, "456 Elm St", "bob@example.com", "Adult", 200, true);
+        Visitor visitor3 = new Visitor("Charlie", 22, "789 Oak St", "charlie@example.com", "Student", 150, false);
+        Visitor visitor4 = new Visitor("David", 28, "101 Pine St", "david@example.com", "Adult", 120, true);
+        Visitor visitor5 = new Visitor("Eve", 35, "202 Maple St", "eve@example.com", "Senior", 80, false);
+
+         // Add Visitors to the Ride's history
+        rollerCoaster.addVisitorToHistory(visitor1);
+        rollerCoaster.addVisitorToHistory(visitor2);
+        rollerCoaster.addVisitorToHistory(visitor3);
+        rollerCoaster.addVisitorToHistory(visitor4);
+        rollerCoaster.addVisitorToHistory(visitor5);
+
+         // Export the visitors to a file
+        rollerCoaster.exportRideHistory();
     }
 
     // Method for part seven of the assignment
