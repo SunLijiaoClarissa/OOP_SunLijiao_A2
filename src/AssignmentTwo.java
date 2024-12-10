@@ -15,10 +15,10 @@ public class AssignmentTwo {
     public void partThree() {
         System.out.println("=== Part Three ===");
          // 创建一个 Employee 操作员
-        Employee rideOperator = new Employee("John", 35, "789 Worker St", "john@example.com", "Ride Operator", "E12345", true);
+        Employee rideOperator = new Employee("Zhangsan", 35, "789 Worker St11", "Zhangsan@qq.com", "Ride Operator", "E12345", true);
 
          // 创建 Ride 对象，确保传递了 maxRider 参数
-        Ride rollerCoaster = new Ride("Roller Coaster", "Thrill", rideOperator, true, "A thrilling roller coaster ride.", 50);
+        Ride rollerCoaster = new Ride("Ferris Wheel", "Sightseeing", rideOperator, true, "A giant Ferris wheel offering breathtaking views of the park and surrounding area. Perfect for a relaxing experience.", 50);
 
         // 创建5个 Visitor 对象
         Visitor visitor1 = new Visitor("Alice", 25, "123 Main St", "alice@example.com", "Adult", 100, true);
@@ -45,10 +45,10 @@ public class AssignmentTwo {
     public void partFourA() {
         System.out.println("=== Part FourA ===");
         // 创建一个新的 Employee 操作员
-        Employee rideOperator = new Employee("John", 35, "789 Worker St", "john@example.com", "Ride Operator", "E12345", true);
+        Employee rideOperator = new Employee("Sunwu", 35, "789 Worker St", "Sunwu@qq.com", "Ride Operator", "1234666", true);
 
         // 创建一个新的 Ride 对象，并指定一个 Employee 操作员
-        Ride rollerCoaster = new Ride("Roller Coaster", "Thrill", rideOperator, true, "A thrilling roller coaster ride.", 50);
+        Ride rollerCoaster = new Ride("Haunted House", "Horror", rideOperator, true, "A spooky haunted house filled with ghosts, ghouls, and mysterious creatures. Dare to enter if you’re not afraid of the dark!", 50);
         // 创建5个 Visitor 对象
         Visitor visitor1 = new Visitor("Alice", 25, "123 Main St", "alice@example.com", "Adult", 100, true);
         Visitor visitor2 = new Visitor("Bob", 30, "456 Oak St", "bob@example.com", "Adult", 200, false);
@@ -83,7 +83,7 @@ public class AssignmentTwo {
     public void partFourB() {
         System.out.println("=== Part FourB ===");
         // 创建一个新的 Employee 操作员
-        Employee rideOperator = new Employee("John", 35, "789 Worker St", "john@example.com", "Ride Operator", "E12345", true);
+        Employee rideOperator = new Employee("Lisi", 35, "789 Worker St", "Lisi@qq.com", "Ride Operator", "12345", true);
     
         // 创建一个新的 Ride 对象
         Ride rollerCoaster = new Ride("Roller Coaster", "Thrill", rideOperator, true, "A thrilling roller coaster ride.", 50);
@@ -124,10 +124,10 @@ public class AssignmentTwo {
     public void partFive() {
         System.out.println("=== Part Five ===");
         // Create a new Employee operator
-        Employee rideOperator = new Employee("John", 35, "789 Worker St", "john@example.com", "Ride Operator", "E12345", true);
+        Employee rideOperator = new Employee("Yueliu", 35, "789 Worker St", "Yueliu@qq.com", "Ride Operator", "234577", true);
         
         // Create a new Ride object
-        Ride rollerCoaster = new Ride("Roller Coaster", "Thrill", rideOperator, true, "A thrilling roller coaster ride.", 50);
+        Ride rollerCoaster = new Ride("Water Splash", "Water Ride", rideOperator, true, "A fun water ride where riders will be splashed with water as they navigate through twisting rivers and waterfalls.", 50);
         // Create 10 Visitor objects
         Visitor visitor1 = new Visitor("Alice", 25, "123 Main St", "alice@example.com", "Adult", 100, true);
         Visitor visitor2 = new Visitor("Bob", 30, "456 Oak St", "bob@example.com", "Adult", 200, false);
@@ -172,8 +172,10 @@ public class AssignmentTwo {
     public void partSix() {
         System.out.println("=== Part Six ===");
         // Implementation for part six goes here
-         // Create a new Ride
-        Ride rollerCoaster = new Ride("Thunderbolt", "Roller Coaster", null, true, "A thrilling roller coaster", 4);
+        Employee rideOperator = new Employee("Pengyi", 35, "789 Worker St", "Pengyi@qq.com", "Ride Operator", "234588", true);
+        
+        // Create a new Ride object
+        Ride rollerCoaster = new Ride("Space Adventure", "Sci-Fi", rideOperator, true, "An intergalactic journey through space, where riders experience weightlessness and zoom past distant stars and planets.", 50);
 
          // Create at least 5 Visitor objects
         Visitor visitor1 = new Visitor("Alice", 25, "123 Main St", "alice@example.com", "Adult", 100, false);
@@ -197,8 +199,8 @@ public class AssignmentTwo {
     public void partSeven() {
         System.out.println("=== Part Seven ===");
         // 1. 创建一个新的 Ride 对象
-    Employee rideOperator = new Employee("John", 35, "789 Worker St", "john@example.com", "Ride Operator", "E12345", true);
-    Ride rollerCoaster = new Ride("Roller Coaster", "Thrill", rideOperator, true, "A thrilling roller coaster ride.", 50);
+    Employee rideOperator = new Employee("Liba", 35, "789 Worker St", "Liba@qq.com", "Ride Operator", "E12345", true);
+    Ride rollerCoaster = new Ride("Bumper Cars", " Interactive", rideOperator, true, "A fun and competitive ride where participants drive electric bumper cars and collide with others in a safe and exciting arena.", 50);
 
     // 2. 导入 CSV 文件（假设 CSV 文件路径是 "rideHistory.csv"）
     String filePath = "rideHistory.csv";  // 这个路径应该是之前导出的 CSV 文件路径

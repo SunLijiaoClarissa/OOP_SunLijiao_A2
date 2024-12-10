@@ -16,7 +16,15 @@ public class Visitor extends Person {
     // Parameterized constructor
     public Visitor(String name, int age, String address, String email, String ticketType, int points, boolean hasFastTrack) {
         super(name, age, address, email);  // 调用Person类的构造器
+        // Validate ticketType (could be extended to check against an enum)
+        if (ticketType == null || ticketType.isEmpty()) {
+            throw new IllegalArgumentException("Ticket type cannot be empty.");
+        }
         this.ticketType = ticketType;
+        // Validate points
+        if (points < 0) {
+            throw new IllegalArgumentException("Points cannot be negative.");
+        }
         this.points = points;
         this.hasFastTrack = hasFastTrack;
     }

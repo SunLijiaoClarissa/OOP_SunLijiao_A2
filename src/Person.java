@@ -9,8 +9,8 @@ public abstract class Person {
     public Person() {
         this.name = "Unknown";
         this.age = 0;
-        this.address = "Not Provided";
-        this.email = "Not Provided"; // 默认值为 "Not Provided"
+        this.address = "null";
+        this.email = "null"; // 默认值为 "null"
     }
 
     // Parameterized constructor
@@ -35,7 +35,11 @@ public abstract class Person {
     }
 
     public void setAge(int age) {
-        this.age = age;
+        if (age >= 0 && age <= 120) { // 假设年龄应在 0 到 120 之间
+            this.age = age;
+        } else {
+            System.out.println("Invalid age value.");
+        }
     }
 
     public String getAddress() {
@@ -51,12 +55,13 @@ public abstract class Person {
     }
 
     public void setEmail(String email) {
-        this.email = email;
+        if (email != null && email.contains("@")) { // Basic email validation
+            this.email = email;
+        }
     }
 
-    // toString method for debugging
     @Override
     public String toString() {
-        return "Person{name='" + name + "', age=" + age + ", address='" + address + "', email='" + email + "'}";
+        return String.format("Person [name='%s', age=%d, address='%s', email='%s']", name, age, address, email);
     }
 }

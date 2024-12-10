@@ -99,6 +99,8 @@ public class Ride implements RideInterface {
             Visitor visitor = visitorQueue.poll(); // 从队列中取出游客
             addVisitorToHistory(visitor); // 将游客添加到历史记录中
         }
+        // 自动排序游客历史记录
+        sortVisitors();
 
         // 增加周期计数
         numOfCycles++;
@@ -223,7 +225,12 @@ public class Ride implements RideInterface {
             System.err.println("Error parsing data: " + e.getMessage());
         }
     }
-
+     // 自定义异常
+    public static class InvalidDataFormatException extends Exception {
+        public InvalidDataFormatException(String message) {
+            super(message);
+        }
+    }
     // Other getter and setter methods
     public String getRideName() {
         return rideName;
