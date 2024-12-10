@@ -1,6 +1,6 @@
 Name,Age,Address,Email,Ticket Type,Points,Has Fast Track
-Alice,25,123 Main St,alice@example.com,Adult,100,false
-Bob,30,456 Elm St,bob@example.com,Adult,200,true
-Charlie,22,789 Oak St,charlie@example.com,Student,150,false
-David,28,101 Pine St,david@example.com,Adult,120,true
-Eve,35,202 Maple St,eve@example.com,Senior,80,false
+Lisi,25,123 Main St,Lisi@66.com,Adult,100,false
+Bob,30,456 Elm St,bob@77.com,Adult,200,true
+Zhangsan,22,789 Oak St,Zhangsan@77.com,Student,150,false
+David,28,101 Pine St,david@66.com,Adult,120,true
+Eve,35,202 Maple St,eve@qq.com,Senior,80,false

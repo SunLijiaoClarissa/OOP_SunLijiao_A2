@@ -21,11 +21,11 @@ public class AssignmentTwo {
         Ride rollerCoaster = new Ride("Ferris Wheel", "Sightseeing", rideOperator, true, "A giant Ferris wheel offering breathtaking views of the park and surrounding area. Perfect for a relaxing experience.", 50);
 
         // 创建5个 Visitor 对象
-        Visitor visitor1 = new Visitor("Alice", 25, "123 Main St", "alice@example.com", "Adult", 100, true);
-        Visitor visitor2 = new Visitor("Bob", 30, "456 Oak St", "bob@example.com", "Adult", 200, false);
-        Visitor visitor3 = new Visitor("Charlie", 22, "789 Pine St", "charlie@example.com", "Child", 50, true);
-        Visitor visitor4 = new Visitor("David", 45, "101 Maple St", "david@example.com", "Senior", 150, false);
-        Visitor visitor5 = new Visitor("Eve", 29, "202 Birch St", "eve@example.com", "Adult", 300, true);
+        Visitor visitor1 = new Visitor("Zhangsan", 25, "123 Main St", "Zhangsan@qq.com", "Adult", 100, true);
+        Visitor visitor2 = new Visitor("Lisi", 30, "456 Oak St", "Lisi@qq.com", "Adult", 200, false);
+        Visitor visitor3 = new Visitor("Charlie", 22, "789 Pine St", "charlie@163.com", "Child", 50, true);
+        Visitor visitor4 = new Visitor("Melijh", 45, "101 Maple St", "Melijh@163.com", "Senior", 150, false);
+        Visitor visitor5 = new Visitor("Eve", 29, "202 Birch St", "eve@163.com", "Adult", 300, true);
 
         // 使用 addVisitorToQueue 方法向队列中添加5个 Visitor
         rollerCoaster.addVisitorToQueue(visitor1);
@@ -50,11 +50,11 @@ public class AssignmentTwo {
         // 创建一个新的 Ride 对象，并指定一个 Employee 操作员
         Ride rollerCoaster = new Ride("Haunted House", "Horror", rideOperator, true, "A spooky haunted house filled with ghosts, ghouls, and mysterious creatures. Dare to enter if you’re not afraid of the dark!", 50);
         // 创建5个 Visitor 对象
-        Visitor visitor1 = new Visitor("Alice", 25, "123 Main St", "alice@example.com", "Adult", 100, true);
-        Visitor visitor2 = new Visitor("Bob", 30, "456 Oak St", "bob@example.com", "Adult", 200, false);
-        Visitor visitor3 = new Visitor("Charlie", 22, "789 Pine St", "charlie@example.com", "Child", 50, true);
-        Visitor visitor4 = new Visitor("David", 45, "101 Maple St", "david@example.com", "Senior", 150, false);
-        Visitor visitor5 = new Visitor("Eve", 29, "202 Birch St", "eve@example.com", "Adult", 300, true);
+        Visitor visitor1 = new Visitor("Zhangsan", 25, "123 Main St", "Zhangsan@qq.com", "Adult", 100, true);
+        Visitor visitor2 = new Visitor("Bob", 30, "456 Oak St", "bob@qq.com", "Adult", 200, false);
+        Visitor visitor3 = new Visitor("Charlie", 22, "789 Pine St", "charlie@qq.com", "Child", 50, true);
+        Visitor visitor4 = new Visitor("David", 45, "101 Maple St", "david@qq.com", "Senior", 150, false);
+        Visitor visitor5 = new Visitor("Eve", 29, "202 Birch St", "eve@qq.com", "Adult", 300, true);
 
         // 使用 addVisitorToQueue 方法向队列中添加5个 Visitor
         rollerCoaster.addVisitorToQueue(visitor1);
@@ -88,11 +88,11 @@ public class AssignmentTwo {
         // 创建一个新的 Ride 对象
         Ride rollerCoaster = new Ride("Roller Coaster", "Thrill", rideOperator, true, "A thrilling roller coaster ride.", 50);
         // 创建5个 Visitor 对象
-        Visitor visitor1 = new Visitor("Alice", 25, "123 Main St", "alice@example.com", "Adult", 100, true);
-        Visitor visitor2 = new Visitor("Bob", 30, "456 Oak St", "bob@example.com", "Adult", 200, false);
-        Visitor visitor3 = new Visitor("Charlie", 22, "789 Pine St", "charlie@example.com", "Child", 50, true);
-        Visitor visitor4 = new Visitor("David", 45, "101 Maple St", "david@example.com", "Senior", 150, false);
-        Visitor visitor5 = new Visitor("Eve", 29, "202 Birch St", "eve@example.com", "Adult", 300, true);
+        Visitor visitor1 = new Visitor("Pengwu", 25, "123 Main St", "Pengwu@163.com", "Adult", 100, true);
+        Visitor visitor2 = new Visitor("Bob", 30, "456 Oak St", "bob@163.com", "Adult", 200, false);
+        Visitor visitor3 = new Visitor("Charlie", 22, "789 Pine St", "charlie@163.com", "Child", 50, true);
+        Visitor visitor4 = new Visitor("David", 45, "101 Maple St", "david@163.com", "Senior", 150, false);
+        Visitor visitor5 = new Visitor("Eve", 29, "202 Birch St", "eve@163.com", "Adult", 300, true);
     
         // 使用 addVisitorToQueue 方法向队列中添加5个 Visitor
         rollerCoaster.addVisitorToQueue(visitor1);
@@ -129,16 +129,16 @@ public class AssignmentTwo {
         // Create a new Ride object
         Ride rollerCoaster = new Ride("Water Splash", "Water Ride", rideOperator, true, "A fun water ride where riders will be splashed with water as they navigate through twisting rivers and waterfalls.", 50);
         // Create 10 Visitor objects
-        Visitor visitor1 = new Visitor("Alice", 25, "123 Main St", "alice@example.com", "Adult", 100, true);
-        Visitor visitor2 = new Visitor("Bob", 30, "456 Oak St", "bob@example.com", "Adult", 200, false);
-        Visitor visitor3 = new Visitor("Charlie", 22, "789 Pine St", "charlie@example.com", "Child", 50, true);
-        Visitor visitor4 = new Visitor("David", 45, "101 Maple St", "david@example.com", "Senior", 150, false);
-        Visitor visitor5 = new Visitor("Eve", 29, "202 Birch St", "eve@example.com", "Adult", 300, true);
-        Visitor visitor6 = new Visitor("Frank", 28, "303 Elm St", "frank@example.com", "Adult", 80, false);
-        Visitor visitor7 = new Visitor("Grace", 33, "404 Cedar St", "grace@example.com", "Adult", 120, true);
-        Visitor visitor8 = new Visitor("Hannah", 20, "505 Pine St", "hannah@example.com", "Child", 60, true);
-        Visitor visitor9 = new Visitor("Ivy", 27, "606 Oak St", "ivy@example.com", "Adult", 90, false);
-        Visitor visitor10 = new Visitor("Jack", 40, "707 Maple St", "jack@example.com", "Senior", 110, true);
+        Visitor visitor1 = new Visitor("Pengwu", 25, "123 Main St", "Pengwu@163.com", "Adult", 100, true);
+        Visitor visitor2 = new Visitor("Bob", 30, "456 Oak St", "bob@qq.com", "Adult", 200, false);
+        Visitor visitor3 = new Visitor("Charlie", 22, "789 Pine St", "charlie@qq.com", "Child", 50, true);
+        Visitor visitor4 = new Visitor("David", 45, "101 Maple St", "david@163.com", "Senior", 150, false);
+        Visitor visitor5 = new Visitor("Eve", 29, "202 Birch St", "eve@163.com", "Adult", 300, true);
+        Visitor visitor6 = new Visitor("Frank", 28, "303 Elm St", "frank@163.com", "Adult", 80, false);
+        Visitor visitor7 = new Visitor("Grace", 33, "404 Cedar St", "grace@163.com", "Adult", 120, true);
+        Visitor visitor8 = new Visitor("Hannah", 20, "505 Pine St", "hannah@163.com", "Child", 60, true);
+        Visitor visitor9 = new Visitor("Ivy", 27, "606 Oak St", "ivy@qq.com", "Adult", 90, false);
+        Visitor visitor10 = new Visitor("Jack", 40, "707 Maple St", "jack@onedrive.com", "Senior", 110, true);
         
         // Add visitors to the queue
         rollerCoaster.addVisitorToQueue(visitor1);
@@ -178,11 +178,11 @@ public class AssignmentTwo {
         Ride rollerCoaster = new Ride("Space Adventure", "Sci-Fi", rideOperator, true, "An intergalactic journey through space, where riders experience weightlessness and zoom past distant stars and planets.", 50);
 
          // Create at least 5 Visitor objects
-        Visitor visitor1 = new Visitor("Alice", 25, "123 Main St", "alice@example.com", "Adult", 100, false);
-        Visitor visitor2 = new Visitor("Bob", 30, "456 Elm St", "bob@example.com", "Adult", 200, true);
-        Visitor visitor3 = new Visitor("Charlie", 22, "789 Oak St", "charlie@example.com", "Student", 150, false);
-        Visitor visitor4 = new Visitor("David", 28, "101 Pine St", "david@example.com", "Adult", 120, true);
-        Visitor visitor5 = new Visitor("Eve", 35, "202 Maple St", "eve@example.com", "Senior", 80, false);
+        Visitor visitor1 = new Visitor("Lisi", 25, "123 Main St", "Lisi@66.com", "Adult", 100, false);
+        Visitor visitor2 = new Visitor("Bob", 30, "456 Elm St", "bob@77.com", "Adult", 200, true);
+        Visitor visitor3 = new Visitor("Zhangsan", 22, "789 Oak St", "Zhangsan@77.com", "Student", 150, false);
+        Visitor visitor4 = new Visitor("David", 28, "101 Pine St", "david@66.com", "Adult", 120, true);
+        Visitor visitor5 = new Visitor("Eve", 35, "202 Maple St", "eve@qq.com", "Senior", 80, false);
 
          // Add Visitors to the Ride's history
         rollerCoaster.addVisitorToHistory(visitor1);
